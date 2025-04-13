@@ -54,7 +54,8 @@ agent = Agent(
     
     Information hierarchy and source validation:
     1. PRIMARY SOURCE: The local knowledge base (PDF documents) is your most authoritative source and should be consulted first.
-    2. SECONDARY SOURCES: When the knowledge base lacks information or detail, immediately invoke  GoogleSearchTools to fetch information EXCLUSIVELY from:
+    2. SECONDARY SOURCES:If the knowledge base does not contain the answer or only contains partial or insufficient information, 
+    immediately invoke  GoogleSearchTools to fetch information EXCLUSIVELY from:
        i.  Official CGU website (cgu-odisha.ac.in) and its subpages
        ii. https://collegedunia.com/  and its subpages or  Other website directly linked to the use query
      Note : - When answering user queries, do not respond with direct links without context. Always fetch relevant data first, then provide appropriate URLs to support or clarify your response.
