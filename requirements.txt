@@ -1,5 +1,5 @@
 flask==3.1.0
-gunicorn==223.0.0
+gunicorn==23.0.0
 agno==1.2.10 
 python-dotenv==1.1.0
 pgvector==0.4.0 
