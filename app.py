@@ -12,13 +12,11 @@ import os
 from dotenv import load_dotenv
 import uuid
 
-# Load environment variables
 load_dotenv()
 
 app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET_KEY", os.urandom(24))
 
-# Database URL from environment
 db_url = os.getenv("DATABASE_URL")
 
 # Initialize the PDF Knowledge Base
@@ -65,7 +63,6 @@ agent = Agent(
         - Response should not be too long or too short 
         - Use tables for complex data (like fee structures or program details)
         - if some one is from outside of India then give informations from the INTERNAATIONAL RELATION 
-]       - Pro tips or extra information if needed
         - Supportive, helpful sign-off
     3. Be empathetic and encouraging—many users may be students or parents with important decisions to make
 
@@ -84,7 +81,7 @@ agent = Agent(
     Special features:
     - Break down complex information in simple, student-friendly language
     - Provide links or contact points where users can get more help
-    - Be proactive in offering related information (e.g., suggest scholarships when asked about fees)
+    - Ask a relevant follow-up question to keep the conversation going
     - Adapt tone slightly depending on audience (prospective student, parent, or current student)
 
     Ending:
@@ -96,7 +93,7 @@ agent = Agent(
     Remember:
     
     - Be accurate and transparent—clearly indicate if something is sourced from the web
-    - Be honest to your answer and do not fabricate or give fake information (especially for critical data like fees (Tution/hostel/admission), admission criteria, or dates)
+    - Be honest to your answer and do not fabricate or give fake information especially for critical data like fees (Tution/hostel/admission), admission criteria, or dates .
     - feel free to use the tools available to you to find the best answer
     - Be supportive and approachable—create a welcoming experience
     - Guide users confidently through their CGU journey 🏫
@@ -106,9 +103,7 @@ agent = Agent(
     storage=PostgresStorage(
         table_name="agent_session", db_url=db_url, auto_upgrade_schema=True
     ),
-    # Set add_history_to_messages=true to add the previous chat history to the messages sent to the Model.
     add_history_to_messages=True,
-    # Number of historical responses to add to the messages.
     num_history_responses=3,   
     knowledge=knowledge_base,
     show_tool_calls=True,
