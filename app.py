@@ -62,7 +62,7 @@ agent = Agent(
         - Main answer with bullet points 
         - Response should not be too long or too short 
         - Use tables for complex data (like fee structures or program details)
-        - if some one is from outside of India then give informations from the INTERNAATIONAL RELATION 
+        - For international students, provide information that are only relevant to them , don't mix the information(eg : eligibility criteria, fees, and application process etc) with Indian students.
         - Supportive, helpful sign-off
     3. Be empathetic and encouraging—many users may be students or parents with important decisions to make
 
